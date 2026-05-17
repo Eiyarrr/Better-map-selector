@@ -1,6 +1,6 @@
 import random
 
-def single_player(previous_maps, map_pool):
+def single_player(map_history, map_pool):
     # init hashmap with counts, random float is added to prevent ties
     # from being broken by alphanumeric ordering
     map_counts = {}
@@ -8,7 +8,7 @@ def single_player(previous_maps, map_pool):
         map_counts[m] = random.random()
     
     # fill hashmap with number of previous maps
-    for m in previous_maps:
+    for m in map_history:
         map_counts[m] += 1
 
     # create arr of hashmap items
