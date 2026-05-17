@@ -20,7 +20,7 @@ map_pool = [
 def gen_prev(count):
     maps = []
     for _ in range(count):
-        rand = random.randint(0, 11)
+        rand = random.randint(0, 10)
         maps.append(map_pool[rand])
 
     return maps
