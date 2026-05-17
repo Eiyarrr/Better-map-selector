@@ -27,7 +27,7 @@ def gen_prev(count):
 
 
 def main():
-    previous_maps = gen_prev(10)
+    previous_maps = gen_prev(20)
     next_maps = single_player(previous_maps, map_pool)
     print(previous_maps)
     print()
