@@ -1,3 +1,6 @@
+import random
+
+
 map_pool = [
     "Ascent",
     "Bind",
@@ -11,3 +14,12 @@ map_pool = [
     "Sunset",
     "Abyss",
 ]
+
+
+def gen_prev(count):
+    maps = []
+    for _ in count:
+        rand = random.randint(0, 11)
+        maps.append(map_pool[rand])
+
+    return maps
