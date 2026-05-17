@@ -1,6 +1,7 @@
 import random
 from single_player import single_player
 from multiplayer import multiplayer
+from log import log
 
 
 map_pool = [
@@ -45,13 +46,7 @@ def main():
     s_next = single_player(s_hist, map_pool)
     m_next = multiplayer(m_hist, map_pool)
 
-    print(s_hist)
-    print()
-    print(m_hist)
-    print()
-    print(s_next)
-    print()
-    print(m_next)
+    log(map_pool, s_hist, s_next, m_hist, m_next)
 
 
 if __name__ == "__main__":
