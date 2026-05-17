@@ -1,5 +1,6 @@
 import random
 from single_player import single_player
+from multiplayer import multiplayer
 
 
 map_pool = [
@@ -17,21 +18,27 @@ map_pool = [
 ]
 
 
-def gen_prev(count):
-    maps = []
-    for _ in range(count):
-        rand = random.randint(0, 10)
-        maps.append(map_pool[rand])
+def gen_history(count, multiplayer):
+    if not multiplayer:
+        maps = []
+        for _ in range(count):
+            rand = random.randint(0, 10)
+            maps.append(map_pool[rand])
 
-    return maps
+        return maps
 
 
 def main():
-    previous_maps = gen_prev(20)
-    next_maps = single_player(previous_maps, map_pool)
-    print(previous_maps)
+    s_hist = gen_history(20, False)
+    m_hist = 0
+    s_next = single_player(s_hist, map_pool)
+    m_next = multiplayer(m_hist, map_pool)
+
+    print(s_hist)
     print()
-    print(next_maps)
+    print(s_next)
+    print()
+    print(m_next)
 
 
 if __name__ == "__main__":
