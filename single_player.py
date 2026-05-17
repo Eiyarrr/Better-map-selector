@@ -12,11 +12,10 @@ def single_player(previous_maps, map_pool):
         map_counts[m] += 1
 
     # create arr of hashmap items
-    # sort + reverse for least played maps at the front
+    # sort for least played at front
     arr = []
     for m, c in map_counts.items():
         arr.append([c, m])
     arr.sort()
-    arr.reverse()
     
     return arr
