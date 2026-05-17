@@ -1,0 +1,2 @@
+Basically, I just hate that most games (if not all major ones) use true random map pools.
+What I mean by this is that when you load in, you have an equal chance of getting ANY map... which is fair... but man is it annoying at times. Sometimes, you'll just be playing for hours just to not even get one of the maps. This project aims to at least be a proof of concept that it really doesn't have to be that way.
